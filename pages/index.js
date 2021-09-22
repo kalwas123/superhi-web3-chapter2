@@ -46,7 +46,7 @@ const connect = async function (){
 
         <form>
           <input type="text" placeholder="Search" />
-        </form>
+        </form
         <Account accounts={accounts} isLogedIn={isLogedIn} connect={connect}/>
       </header>
 
