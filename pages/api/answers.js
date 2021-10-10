@@ -71,7 +71,7 @@ export default function handler(req, res) {
         questionId: 1,
         answerId: 2,
         reply: answers[1],
-        account: "0xb25bf3990c5a274a758a2a3a4cc90b3e407eaaf4",
+        account: "0xa2DA48caa9F070a375818D8De2D3931489c67695",
       },
       {
         questionId: 1,
@@ -82,7 +82,7 @@ export default function handler(req, res) {
     ];
 
     res
-      .setHeader("Content-Type", "application/json")
+      // .setHeader("Content-Type", "application/json")
       .status(200)
       .json({ answers: data });
   }

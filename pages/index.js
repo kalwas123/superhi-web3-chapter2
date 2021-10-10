@@ -55,8 +55,22 @@ export default function Home() {
       .then((response) => response.json())
       .then((data) => {
         setAnswers(data.answers);
+        setLoading(false);
       });
   }, []);
+
+  let answersArea = <div className="loading">Loading answers...</div>;
+
+  if (!isLoading) {
+    answersArea = answers.map((answer, index) => (
+      <Answer
+        number={index + 1}
+        answer={answer}
+        accounts={accounts}
+        isLoggedIn={isLogedIn}
+      />
+    ));
+  }
 
   return (
     <main>
@@ -106,7 +120,7 @@ export default function Home() {
 
       <section className="answers">
         {answers.length}
-        <div className="loading">Loading answers...</div>
+        {answersArea}
       </section>
 
       <Head>
