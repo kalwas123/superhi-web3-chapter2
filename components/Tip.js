@@ -22,7 +22,8 @@ const Tip = function ({ isLoggedIn, accounts, address }) {
   };
   console.log(accounts[0]);
   console.log(address);
-  if (accounts[0].toLowerCase() === address.toLowerCase()) {
+  let curAaccount = accounts[0] ? accounts[0].toLowerCase() : "";
+  if (curAaccount === address.toLowerCase()) {
     return <></>;
   } else {
     return (

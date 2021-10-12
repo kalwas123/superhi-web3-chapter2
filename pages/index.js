@@ -119,8 +119,12 @@ export default function Home() {
       </section>
 
       <section className="answers">
-        {answers.length}
         {answersArea}
+        <AnswerForm
+          accounts={accounts}
+          answers={answers}
+          isLoggedIn={isLogedIn}
+        />
       </section>
 
       <Head>
